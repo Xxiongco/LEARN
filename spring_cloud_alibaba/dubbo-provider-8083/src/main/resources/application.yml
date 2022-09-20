@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+dubbo:
+  scan:
+    base-packages: com.panda.service.impl #dubbo扫描的包目录
+  protocol:
+    name: dubbo   #dubbo协议
+    port: -1   #端口
+  registry:
+    address: nacos://localhost:8848 #dubbo注册中心的地址
+
+server:
+  port: 8083
