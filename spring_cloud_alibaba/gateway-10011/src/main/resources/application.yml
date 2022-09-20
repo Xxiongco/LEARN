@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: gateway-10011
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    # 网关配置
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: CONSUMER
+          uri: lb://consumer-9091
+          predicates:
+            - Method=GET,POST
+        - id: PROVIDER
+          uri: lb://provider
+          predicates:
+            - Method=GET,POST
+
+
+server:
+  port: 10011
