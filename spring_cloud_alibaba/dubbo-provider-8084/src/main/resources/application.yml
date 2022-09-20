@@ -8,7 +8,7 @@ spring:
 
 dubbo:
   scan:
-    base-packages: com.panda.provider8083.service.impl #dubbo扫描的包目录
+    base-packages: com.panda.service.impl #dubbo扫描的包目录
   protocol:
     name: dubbo   #dubbo协议
     port: -1   #端口
@@ -16,4 +16,4 @@ dubbo:
     address: nacos://localhost:8848 #dubbo注册中心的地址
 
 server:
-  port: 8083
+  port: 8084

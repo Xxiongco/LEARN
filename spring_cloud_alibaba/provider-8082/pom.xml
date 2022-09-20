@@ -95,7 +95,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.panda.provider8083.Consumer9092Application</mainClass>
+                    <mainClass>Consumer9092Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>
