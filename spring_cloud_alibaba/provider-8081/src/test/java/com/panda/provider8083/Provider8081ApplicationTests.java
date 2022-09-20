@@ -1,4 +1,4 @@
-package com.panda.consumer9091;
+package com.panda.provider8083;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

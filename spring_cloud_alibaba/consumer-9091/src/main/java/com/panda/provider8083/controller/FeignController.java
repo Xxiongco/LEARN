@@ -1,6 +1,6 @@
-package com.panda.consumer9091.controller;
+package com.panda.provider8083.controller;
 
-import com.panda.consumer9091.service.ProviderService;
+import com.panda.provider8083.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

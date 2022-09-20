@@ -1,4 +1,4 @@
-package com.panda.consumer9091.service;
+package com.panda.provider8083.service;
 
 
 import org.springframework.cloud.openfeign.FeignClient;

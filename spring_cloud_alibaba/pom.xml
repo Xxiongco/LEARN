@@ -4,7 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.panda</groupId>
     <artifactId>spring_cloud_alibaba</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>dubbo-service-api</module>
+        <module>dubbo-consumer-9092</module>
+        <module>dubbo-provider-8084</module>
+    </modules>
     <name>spring_cloud_alibaba</name>
     <description>spring_cloud_alibaba</description>
 

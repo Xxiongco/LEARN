@@ -1,15 +1,17 @@
-package com.panda.consumer9091;
+package com.panda.provider8083;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class Provider8081Application {
+@EnableFeignClients
+public class Consumer9091Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Provider8081Application.class, args);
+        SpringApplication.run(Consumer9091Application.class, args);
     }
 
 }

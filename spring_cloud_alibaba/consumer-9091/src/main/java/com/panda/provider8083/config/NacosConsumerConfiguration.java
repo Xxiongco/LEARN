@@ -1,4 +1,4 @@
-package com.panda.consumer9091.config;
+package com.panda.provider8083.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
