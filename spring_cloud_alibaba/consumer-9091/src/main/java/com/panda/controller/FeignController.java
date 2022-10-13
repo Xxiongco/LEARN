@@ -17,6 +17,7 @@ public class FeignController {
 
     @GetMapping("/{msg}")
     public String hello(@PathVariable("msg") String msg) {
-        return providerService.test(msg);
+        String test = providerService.test(msg);
+        return test;
     }
 }

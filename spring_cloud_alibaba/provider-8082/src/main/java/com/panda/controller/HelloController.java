@@ -24,6 +24,7 @@ public class HelloController {
     public String hello(@PathVariable("msg") String msg) {
         String message = String.format(MESSAGE_CODE, msg);
         log.info(name + " : " + message);
-        return name + " : " + message;
+        throw new RuntimeException("test");
+        //return name + " : " + message;
     }
 }

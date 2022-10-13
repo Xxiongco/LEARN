@@ -25,8 +25,6 @@ public class HelloController {
         String message = String.format(MESSAGE_CODE, msg);
         log.info(name + " : " + message);
 
-        int i = 1/ 0;
-
         return name + " : " + message;
     }
 }

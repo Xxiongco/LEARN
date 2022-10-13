@@ -7,6 +7,7 @@ import org.apache.dubbo.config.annotation.Service;
 public class DubboServiceImpl implements DubboService {
     @Override
     public String dubbo(String msg) {
-        return "dubbo-provider-8084" + msg;
+        throw new RuntimeException("test runtime exception");
+        //return "dubbo-provider-8084" + msg;
     }
 }
