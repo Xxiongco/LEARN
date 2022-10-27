@@ -9,4 +9,6 @@ activiti监听器有两种
 本地的画图软件（Activiti BPMN visualizer）是没有添加任务监听器的，只有执行监听器。
 
 理解BusinessKey的作用，
+设置流程变量时，如果通过流程变量设置审批人，那么只能设置一个人。
+如果设置多个人，只能通过回调设置addCandidateUser
 
