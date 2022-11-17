@@ -1,2 +1,8 @@
 server:
   port: 8081
+spring:
+  security:
+    user:
+      name: root
+      password: root
+      roles: admin,customer

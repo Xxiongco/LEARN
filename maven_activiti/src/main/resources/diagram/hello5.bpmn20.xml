@@ -2,7 +2,7 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
   <process id="hello5" name="hello5" isExecutable="true">
     <startEvent id="sid-e6ae05aa-90c5-48d8-ba21-c3c1470394d4"/>
-    <userTask id="sid-8b65ec71-a0b9-4881-a03d-735a40725b1c" activiti:assignee="#{name}"/>
+    <userTask id="sid-8b65ec71-a0b9-4881-a03d-735a40725b1c" activiti:assignee="#{names}"/>
     <sequenceFlow id="sid-b4c8710c-83e7-499b-8b02-d9b094f9238a" sourceRef="sid-e6ae05aa-90c5-48d8-ba21-c3c1470394d4" targetRef="sid-8b65ec71-a0b9-4881-a03d-735a40725b1c"/>
     <endEvent id="sid-f59c243f-7cec-4af2-bf8b-aeb0e233e1ba"/>
     <sequenceFlow id="sid-66744152-7328-4095-9963-9a3334d62f7c" sourceRef="sid-8b65ec71-a0b9-4881-a03d-735a40725b1c" targetRef="sid-f59c243f-7cec-4af2-bf8b-aeb0e233e1ba"/>

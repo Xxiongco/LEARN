@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/processdef"
+             xmlns:choerodon="http://choerodon.io"
+>
   <process id="hello" name="hello" isExecutable="true">
     <startEvent id="sid-19d96d15-efe9-40d9-9193-8c65b1e2efc1"/>
-    <userTask id="sid-60511c3c-dfbd-4b6b-9249-16174448f811" name="提交申请" activiti:assignee="张三"/>
-    <userTask id="sid-85d9947e-c296-4fc2-8453-d161c6ec8964" name="部门经理" activiti:assignee="lisi"/>
+    <userTask id="sid-60511c3c-dfbd-4b6b-9249-16174448f811" name="提交申请" activiti:assignee="张三">
+      <extensionElements>
+        <activiti:taskListener class="second.HelloNote1ListenerImpl" event="create"/>
+      </extensionElements>
+    </userTask>
+    <userTask id="sid-85d9947e-c296-4fc2-8453-d161c6ec8964" name="部门经理" activiti:assignee="lisi">
+      <extensionElements>
+        <choerodon:customElement-properties properties="{&quot;name&quot;:&quot;&quot;,&quot;conditionsequenceflow&quot;:&quot;&quot;,&quot;defaultflow&quot;:&quot;false&quot;}"/>
+      </extensionElements>
+    </userTask>
     <userTask id="sid-fe4c502c-4c39-40fc-bda9-76300566836e" name="总经理" activiti:assignee="wangwu"/>
     <endEvent id="sid-ba4696cd-4279-4b64-a9f8-8131cd44c6e1"/>
     <sequenceFlow id="sid-ccd58b0d-c466-4db8-8d05-249fc8c30675" sourceRef="sid-19d96d15-efe9-40d9-9193-8c65b1e2efc1" targetRef="sid-60511c3c-dfbd-4b6b-9249-16174448f811"/>

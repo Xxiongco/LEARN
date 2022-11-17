@@ -165,7 +165,7 @@ public class Hello {
     @Test
     public void completeMyPersonalTask() {
         //任务ID
-        String taskId = "187502";
+        String taskId = "27502";
 
         TaskService taskService = processEngine.getTaskService();
         processEngine.getTaskService()//与正在执行的任务管理相关的Service

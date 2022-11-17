@@ -1,5 +1,9 @@
 package learn;
 
+import com.google.common.collect.Lists;
+import org.dom4j.DocumentFactory;
+import org.dom4j.tree.DefaultDocument;
+import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -10,6 +14,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DOMTest {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
@@ -61,4 +67,17 @@ public class DOMTest {
         }
 
     }
+
+    /**
+     * @since 2022-11-10
+     * 看hzero时，报表服务需要测试
+     *  read dom
+     */
+    public void readDom() {
+        DocumentFactory documentFactory = DocumentFactory.getInstance();
+        DefaultDocument document = new DefaultDocument();
+        document.setDocumentFactory(documentFactory);
+
+    }
+
 }
