@@ -5,7 +5,8 @@
     <userTask id="sid-ab1b4833-43f3-4272-a48b-08cd1620289b" name="提交申请" activiti:assignee="#{inputUser}"/>
     <userTask id="sid-c5a80b85-72f3-4c76-88e4-a2aad6ec65f9" name="学术审批">
       <extensionElements>
-        <activiti:taskListener class="second.Hello4Note2ListenerImpl" event="create"/>
+        <activiti:taskListener class="second.Hello4Note2ListenerImpl" event="assignment"/>
+        <activiti:taskListener event="create" class="second.Hello4Note3ListenerImpl"/>
       </extensionElements>
     </userTask>
     <userTask id="sid-1db2223a-4587-46bf-bebb-d8bd680c3a85" name="老总审批">

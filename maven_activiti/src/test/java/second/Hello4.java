@@ -100,7 +100,7 @@ public class Hello4 {
         Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("pass", "1");
         //任务ID
-        String taskId = "200003";
+        String taskId = "12502";
         processEngine.getTaskService()//与正在执行的任务管理相关的Service
                 .complete(taskId, variables);
         System.out.println("完成任务：任务ID：" + taskId);

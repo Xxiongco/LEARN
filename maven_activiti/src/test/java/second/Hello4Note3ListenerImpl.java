@@ -10,6 +10,7 @@ import org.activiti.engine.delegate.TaskListener;
 public class Hello4Note3ListenerImpl implements TaskListener {
     @Override
     public void notify(DelegateTask delegateTask) {
-        delegateTask.setAssignee("ding");
+        System.out.println(delegateTask.getAssignee());
+        System.out.println(delegateTask);
     }
 }
