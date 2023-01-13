@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.panda.spring_boot.domian.Student;
+import com.panda.spring_boot.domian.Teacher;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -40,6 +42,23 @@ public class LocalTest {
          搭配JSON.parseObject(字符串,实体类.class)方法使用，将字符串转换成实体类。
 
          */
+
+    }
+
+    /**
+     *  继承测试
+     */
+    @Test
+    public void testInherit() {
+
+        Teacher teacher = new Teacher();
+        teacher.setName("hello");
+        teacher.setBirthDay(new Date());
+
+        System.out.println(JSONObject.toJSONStringWithDateFormat(
+                teacher,
+                "yyyy-MM-dd HH:mm:ss",
+                SerializerFeature.WriteDateUseDateFormat));
 
     }
 
