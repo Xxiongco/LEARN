@@ -17,6 +17,13 @@
 
     <dependencies>
 
+
+        <dependency>
+            <groupId>com.panda</groupId>
+            <artifactId>StringReentrantLock</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!--redisson-->
         <dependency>
             <groupId>org.redisson</groupId>

@@ -29,6 +29,10 @@ public class TestRedisServerImpl implements TestRedisServer {
                 RLock lock = redissonClient.getLock(String.valueOf(finalI));
                 try {
                     System.out.println("redissonClient: " + redissonClient.getId() + "  thread-id: " + Thread.currentThread().getId());
+
+                    // 1. 取锁时的等待时间
+                    // 2. 可持有锁的时间（过期时间）
+                    // 3. 时间单位
                     boolean b = lock.tryLock(0, 1000L, TimeUnit.SECONDS);
                     if (b) {
                         System.out.println("加锁成功 " + Thread.currentThread().getId());
@@ -43,10 +47,6 @@ public class TestRedisServerImpl implements TestRedisServer {
 
             }).start();
         }
-
-
-
-
         return null;
     }
 }
