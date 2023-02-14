@@ -43,6 +43,31 @@ public class Test {
 
     }
 
+    @org.junit.jupiter.api.Test
+    public void test3() {
+
+        String str = "{\n" +
+                "  \"paramIn\": [{\n" +
+                "            \"fromCidId\":46660,\n" +
+                "      \"toCidId\":46660,\n" +
+                "      \"toLocationId\":382870,\n" +
+                "      \"devlceCode\":\"PDA\",\n" +
+                "      \"pageId\":1\n" +
+                "  },{\n" +
+                "       \"fromCidId\":46660,\n" +
+                "      \"toCidId\":46660,\n" +
+                "      \"toLocationId\":382870,\n" +
+                "      \"devlceCode\":\"PDA\",\n" +
+                "      \"pageId\":1\n" +
+                "  }],\n" +
+                "  \"macroCode\": \"WMS_APP_WHOLE_CID_TRANSFER\"\n" +
+                "}";
+
+
+
+
+    }
+
 
 
 }
